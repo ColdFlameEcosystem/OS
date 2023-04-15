@@ -1,6 +1,6 @@
-[submodule "ui/compositor/protocols/3rdparty/wlroots"]
-	path = ui/compositor/protocols/3rdparty/wlroots
+[submodule "systemui/compositor/protocols/3rdparty/wlroots"]
+	path = systemui/compositor/protocols/3rdparty/wlroots
 	url = https://gitlab.freedesktop.org/wlroots/wlr-protocols.git
-[submodule "ui/compositor/protocols/3rdparty/wayland"]
-	path = ui/compositor/protocols/3rdparty/wayland
+[submodule "systemui/compositor/protocols/3rdparty/wayland"]
+	path = systemui/compositor/protocols/3rdparty/wayland
 	url = https://gitlab.freedesktop.org/wayland/wayland-protocols.git

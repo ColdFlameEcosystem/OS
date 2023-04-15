@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project("Ignite OS"
-        VERSION "0.1"
-        LANGUAGES CXX C
-        )
+project("Ignite OS" VERSION "0.1" LANGUAGES CXX)
 
 
 set(CMAKE_AUTOMOC ON)
@@ -17,6 +14,7 @@ enable_testing()
 
 set(DIRS
         ui
+        systemui
         tests)
 foreach(DIR IN LISTS DIRS)
         add_subdirectory(${DIR})
