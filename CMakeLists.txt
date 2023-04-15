@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.16)
 project("Ignite OS"
         VERSION "0.1"
         LANGUAGES CXX C
