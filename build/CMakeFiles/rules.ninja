@@ -7,7 +7,7 @@
 
 # =============================================================================
 # Project: Ignite OS
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__igniteui_unscanned_
+rule CXX_COMPILER__igniteui_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -32,7 +32,7 @@ rule CXX_COMPILER__igniteui_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__igniteui_
+rule CXX_SHARED_LIBRARY_LINKER__igniteui_Debug
   command = $PRE_LINK && /usr/bin/g++ -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule CXX_SHARED_LIBRARY_LINKER__igniteui_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__igniteuiplugin_unscanned_
+rule CXX_COMPILER__igniteuiplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +51,7 @@ rule CXX_COMPILER__igniteuiplugin_unscanned_
 #############################################
 # Rule for linking CXX shared module.
 
-rule CXX_MODULE_LIBRARY_LINKER__igniteuiplugin_
+rule CXX_MODULE_LIBRARY_LINKER__igniteuiplugin_Debug
   command = $PRE_LINK && /usr/bin/g++ -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX shared module $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +60,7 @@ rule CXX_MODULE_LIBRARY_LINKER__igniteuiplugin_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__IgniteUITest_unscanned_
+rule CXX_COMPILER__IgniteUITest_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule CXX_COMPILER__IgniteUITest_unscanned_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__IgniteUITest_
+rule CXX_EXECUTABLE_LINKER__IgniteUITest_Debug
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
